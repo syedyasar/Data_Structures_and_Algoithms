@@ -8,19 +8,17 @@
 
 using namespace std;
 
-int fun1(int n){
+void fun1(int n){
 	if(n>0){
 		cout << n << "  ";
 		fun1(n-1);
 		fun1(n-1);
 	}
-	return 0;
-	
 }
 
 int main() {
 	
-	fun1(6);
+	fun1(4);
 	
 	return 0;
 }
