@@ -16,6 +16,17 @@ int power_Recursion(int b, int p)
 	return  b * power_Recursion(b,p-1);
 }
 
+int power1_Recursion(int b, int p)
+{
+	if(p==0) 
+		return 1;
+		if(p%2==0)
+			return power1_Recursion(b*b,p/2);
+		else
+			return b* power1_Recursion(b*b,(p-1)/2) ;
+
+}
+
 int power_loop(int b , int p)
 {
 	int f=1;
@@ -31,7 +42,8 @@ int main()
 	int base, pow;
 	cout << "Enter the value of base and power : "  << endl;
 	cin >> base >> pow ; 
-	cout << power_Recursion( base , pow )<< endl;
+	cout << power1_Recursion( base , pow )<< endl;
+//	cout << power_Recursion( base , pow )<< endl;	
 //	cout << power_loop( base , pow )<< endl;	
 	return 0;
 }
